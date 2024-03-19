@@ -1,8 +1,0 @@
-{
-    "driver": "{SQL Server}",
-    "server": "Pablo\\SERVERMORALES",
-    "database": "MASCOTAS",
-    "username": "DBAMASCOTAS",
-    "password": "DBA1998!"
-  }
-  
