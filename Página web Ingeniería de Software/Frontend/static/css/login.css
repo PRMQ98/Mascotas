@@ -1,0 +1,69 @@
+body { 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    background-image: url('../images/fondo.jpg'); 
+    background-color: #333; 
+    background-size: cover;
+    background-position: center; 
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container { 
+    width: 340px; 
+    padding: 30px; 
+    background-color: rgba(66, 66, 66, 0.9); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    text-align: center; 
+}
+
+input[type="email"], input[type="password"], button, .create-user-btn {
+    width: 100%;
+    padding: 12px; 
+    margin-top: 10px; 
+    border-radius: 8px; 
+    background: rgba(51, 51, 51, 0.9); 
+    border: 1px solid #555;
+    color: #fff;
+    box-sizing: border-box; 
+}
+
+input[type="email"], input[type="password"] {
+    text-align: left; 
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #27496d; 
+    outline: none;
+}
+
+button, .create-user-btn { 
+    background-color: #27496d;
+    transition: background-color 0.3s, transform 0.2s ease-in-out; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+button:hover, button:focus, .create-user-btn:hover { 
+    background-color: #0a2942; 
+    transform: scale(1.05); 
+}
+
+.create-user-btn {
+    display: block;
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 12px 20px; 
+    border-radius: 8px; 
+}
+
+h1 {
+    color: #ffffff; 
+    margin-top: 0;
+    margin-bottom: 20px;
+}

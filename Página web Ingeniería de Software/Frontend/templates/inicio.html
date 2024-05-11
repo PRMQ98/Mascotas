@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+<div class="contenido-centrado">
+    <h1>Bienvenido a la Página de Inicio</h1>
+    <div id="INICIO" class="slider"></div>
+    <ul id="puntos" class="puntos"></ul>
+</div>
+<script src="{{ url_for('static', filename='js/imagenesinicio.js') }}"></script>
+<link rel="stylesheet" href="static/css/inicioimagenes.css">
+{% endblock %}
