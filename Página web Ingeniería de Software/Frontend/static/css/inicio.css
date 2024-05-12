@@ -1,23 +1,36 @@
+/* Variables de colores y dimensiones */
+:root {
+    --fondo-oscuro: #333;
+    --color-primario: #27496d;
+    --color-secundario: #0a2942;
+    --color-fondo-formulario: rgba(66, 66, 66, 0.9);
+    --color-input-fondo: rgba(51, 51, 51, 0.9);
+    --color-borde: #555;
+    --color-texto: #fff;
+    --sombra-box: 0 4px 6px rgba(0,0,0,0.1);
+    --fondo-imagen: url('../images/fondo.jpg');
+}
 
 .sidebar {
-    background-image: url('../images/fondo.jpg'); 
-    height: 100vh;
+    background-image: var(--fondo-imagen); 
+    height: 92vh;
     width: 250px;
     position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #27496d;
+    left: 7px;
+    top: 10px;
+    background-color: var(--color-primario);
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px;
 }
 
 .sidebar button.menuButton, .sidebar button#logoutButton {
     padding: 10px 15px;
     width: 90%;
-    background-color: #27496d;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -28,7 +41,7 @@
 
 .sidebar button.menuButton:hover, .sidebar button#logoutButton:hover {
     background-color: #feffff;
-    color: black;
+    color: var(--fondo-oscuro);
 }
 
 .sidebar button#logoutButton {
@@ -38,12 +51,11 @@
     text-align: center; 
 }
 
-
 .content {
     margin-left: 260px;
     padding: 20px;
-    background-image: url('../images/fondo.jpg');
-    border-radius: 3%;
+    background-image: var(--fondo-imagen);
+    border-radius: 20px;  /* Estilizado para hacer los bordes consistentes con el sidebar */
     display: flex; 
     justify-content: center; 
     flex-direction: column; 
@@ -53,30 +65,22 @@
     margin: 10px 0;
     padding: 12px 20px;
     width: calc(100% - 40px);
-    color: black;
-}
-
-#fotografia{
-    margin: 10px 0;
-    padding: 12px 20px;
-    width: calc(100% - 40px);
-    color: rgb(255, 255, 255);
+    color: var(--fondo-oscuro);
 }
 
 .content form button {
-    background-color: #27496d;
-    color: white;
-    border-radius: 3%;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    border-radius: 10px;
 }
 
 .content form button:hover {
-    background-color: #27496d;
-    color: white;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
 }
 
-
 .login-container, .sidebar, .content {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: var(--sombra-box);
 }
 
 @media (max-width: 768px) {
@@ -91,39 +95,38 @@
     }
 }
 
-button{ 
-    background-color: #27496d; 
+button { 
+    background-color: var(--color-primario); 
     transition: background-color 0.3s, transform 0.2s ease-in-out; 
     position: relative; 
     overflow: hidden; 
-    color: white;
-
+    color: var(--color-texto);
 }
 
 button:hover { 
-    background-color: #0a2942; 
+    background-color: var(--color-secundario); 
     transform: scale(1.05); 
 }
 
-h1, label{
+h1, label {
     text-align: center;
-    color: white;
+    color: var(--color-texto);
 }
 
-input{
+input {
     text-align: left;
-    color: white;
+    color: var(--color-texto);
 }
-
 
 .content button#registro {
     margin: 10px auto; 
     width: 100%; 
-    background-color: #27496d; 
-    color: white; 
+    background-color: var(--color-primario); 
+    color: var(--color-texto); 
     border: none;
     border-radius: 10px; 
     cursor: pointer; 
     text-align: center; 
     transition: background-color 0.3s; 
 }
+

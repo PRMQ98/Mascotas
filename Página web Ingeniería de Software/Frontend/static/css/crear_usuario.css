@@ -1,10 +1,22 @@
+/* Variables de colores y dimensiones */
+:root {
+    --fondo-oscuro: #333;
+    --color-primario: #27496d;
+    --color-secundario: #0056b3;
+    --color-fondo-formulario: rgba(66, 66, 66, 0.9);
+    --color-input-fondo: rgba(51, 51, 51, 0.9);
+    --color-borde: #555;
+    --color-texto: #fff;
+    --sombra-box: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
 body { 
     font-family: 'Helvetica Neue', Arial, sans-serif; 
     background-image: url('../images/fondo.jpg'); 
-    background-color: #333; 
+    background-color: var(--fondo-oscuro); 
     background-size: cover;
     background-position: center; 
-    color: #fff;
+    color: var(--color-texto);
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,16 +28,16 @@ body {
 .formulario {
     width: 100%;
     max-width: 500px; 
-    background-color: rgba(66, 66, 66, 0.9); 
+    background-color: var(--color-fondo-formulario); 
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); 
+    box-shadow: var(--sombra-box); 
     margin: 40px auto; 
-    color: #fff; 
+    color: var(--color-texto); 
 }
 
 .formulario h2 {
-    color: #27496d; 
+    color: var(--color-primario); 
     text-align: center; 
 }
 
@@ -37,16 +49,16 @@ body {
 .formulario input[type="text"], .formulario input[type="email"] {
     padding: 10px; 
     margin-bottom: 15px; 
-    border: 1px solid #555; 
+    border: 1px solid var(--color-borde); 
     border-radius: 8px; 
-    background: rgba(51, 51, 51, 0.9); 
-    color: #fff;
+    background: var(--color-input-fondo); 
+    color: var(--color-texto);
 }
 
 .formulario button {
     padding: 10px;
-    background-color: #27496d; 
-    color: white; 
+    background-color: var(--color-primario); 
+    color: var(--color-texto); 
     border: none; 
     border-radius: 8px; 
     font-size: 18px; 
@@ -56,15 +68,15 @@ body {
 }
 
 .formulario button:hover {
-    background-color: #0056b3; 
+    background-color: var(--color-secundario); 
     transform: scale(1.05);
 }
 
 .button {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #27496d;
-    color: #ffffff;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
     text-decoration: none;
     border-radius: 8px;
     text-align: center;
@@ -72,5 +84,5 @@ body {
 }
 
 .button:hover {
-    background-color: #27496d;
+    background-color: var(--color-secundario);
 }
