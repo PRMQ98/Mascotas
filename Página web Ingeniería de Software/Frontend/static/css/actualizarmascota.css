@@ -1,7 +1,11 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
 #listaMascotas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: justify; 
+    justify-content: flex-start; /* Corregido para un alineamiento adecuado */
     padding: 0 20px;
 }
 
@@ -16,6 +20,8 @@
     position: relative;
     transition: transform 0.3s ease-in-out;
     color: white;
+    background:transparent; /* Añadido un fondo oscuro para mejorar la legibilidad */
+    border-radius: 5px; /* Estilo consistente con las imágenes */
 }
 
 .mascota:hover {
@@ -31,12 +37,14 @@
 
 .mascota h2 { 
     width: 100%;
-    text-align: center; 
+    text-align: center;
 }
 
 .mascota .info, .mascota p {
     text-align: left;
-    width: 100%; 
+    width: 100%;
+    margin: 2px 0; /* Reducido para disminuir el espacio vertical */
+    font-weight: bold; /* Negrita para títulos de información */
 }
 
 .mascota button {
@@ -64,5 +72,5 @@
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: black; 
+    color: black;
 }

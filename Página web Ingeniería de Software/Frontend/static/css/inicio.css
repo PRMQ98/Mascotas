@@ -13,6 +13,7 @@
 
 body{
     background: var(--fondo-oscuro);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .sidebar {
