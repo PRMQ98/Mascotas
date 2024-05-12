@@ -2,7 +2,7 @@
 :root {
     --fondo-oscuro: #333;
     --color-primario: #27496d;
-    --color-secundario: #0a2942;
+    --color-secundario: #0056b3;
     --color-fondo-formulario: rgba(66, 66, 66, 0.9);
     --color-input-fondo: rgba(51, 51, 51, 0.9);
     --color-borde: #555;
@@ -12,52 +12,60 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Unifica el tipo de fuente en toda la aplicación */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background: var(--fondo-oscuro);
     color: var(--color-texto);
     line-height: 1.6;
-    padding: 7px;
+    padding: 5px;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+    left: 7px;
+    top: 10px;
 }
 
 h1 {
     color: var(--color-texto);
     text-align: center;
-    margin-bottom: 10px; /* Menos espacio debajo del título */
+    margin-bottom: 10px;
 }
 
-form {
-    max-width: 800px; /* Aumento del ancho para el formulario */
-    margin: 10px auto;
-    padding: 25px; /* Menos padding vertical para reducir la altura */
+.formulario {
+    width: 100%; /* Se asegura de que el formulario use todo el ancho del contenedor */
+    max-width: 700px; /* Ajuste del ancho máximo para reducir la altura */
+    margin: 20px auto;
+    padding: 15px; /* Reduce el padding para disminuir la altura */
     background: var(--color-fondo-formulario);
     border-radius: 8px;
     box-shadow: var(--sombra-box);
 }
 
-label {
+.formulario label {
     display: block;
-    margin-bottom: 5px; /* Menor espacio entre campos */
+    margin-bottom: 5px;
     color: var(--color-texto);
-    text-align: left; /* Alineación a la izquierda */
+    text-align: left;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="file"] {
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="file"] {
     width: 100%;
-    padding: 5px; /* Reducción del padding para menos altura */
-    margin-bottom: 5px; /* Menos margen entre campos */
+    padding: 5px;
+    margin-bottom: 5px;
     border: 1px solid var(--color-borde);
     border-radius: 4px;
     background: var(--color-input-fondo);
     color: var(--color-texto);
 }
 
-button#registro {
+.formulario button#registro {
     display: block;
-    width: 100%;
-    padding: 10px;
+    width: auto; /* Permite que el botón tenga el ancho de su contenido */
+    padding: 10px 20px; /* Ajusta el padding para mayor coherencia visual */
+    margin: 10px auto; /* Centra el botón horizontalmente */
     background-color: var(--color-primario);
     color: var(--color-texto);
     border: none;
@@ -67,22 +75,22 @@ button#registro {
     transition: background-color 0.3s;
 }
 
-button#registro:hover {
+.formulario button#registro:hover {
     background-color: var(--color-secundario);
 }
 
-/* Ajustes responsivos para mejorar la visualización en dispositivos móviles */
+/* Ajustes responsivos */
 @media (max-width: 768px) {
     body {
         padding: 10px;
     }
 
-    form {
+    .formulario {
         padding: 10px;
-        max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+        max-width: 100%; /* Ajuste para dispositivos móviles */
     }
 
     h1 {
-        font-size: 24px; /* Ajuste del tamaño de fuente en dispositivos pequeños */
+        font-size: 24px;
     }
 }

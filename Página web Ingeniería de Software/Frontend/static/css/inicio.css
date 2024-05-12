@@ -11,9 +11,13 @@
     --fondo-imagen: url('../images/fondo.jpg');
 }
 
+body{
+    background: var(--fondo-oscuro);
+}
+
 .sidebar {
     background-image: var(--fondo-imagen); 
-    height: 92vh;
+    height: 93vh;
     width: 250px;
     position: fixed;
     left: 7px;
