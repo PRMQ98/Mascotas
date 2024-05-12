@@ -1,0 +1,88 @@
+/* Variables de colores y dimensiones */
+:root {
+    --fondo-oscuro: #333;
+    --color-primario: #27496d;
+    --color-secundario: #0a2942;
+    --color-fondo-formulario: rgba(66, 66, 66, 0.9);
+    --color-input-fondo: rgba(51, 51, 51, 0.9);
+    --color-borde: #555;
+    --color-texto: #fff;
+    --sombra-box: 0 4px 6px rgba(0,0,0,0.1);
+    --fondo-imagen: url('../images/fondo.jpg');
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Unifica el tipo de fuente en toda la aplicación */
+    background: var(--fondo-oscuro);
+    color: var(--color-texto);
+    line-height: 1.6;
+    padding: 7px;
+    margin: 0;
+}
+
+h1 {
+    color: var(--color-texto);
+    text-align: center;
+    margin-bottom: 10px; /* Menos espacio debajo del título */
+}
+
+form {
+    max-width: 800px; /* Aumento del ancho para el formulario */
+    margin: 10px auto;
+    padding: 25px; /* Menos padding vertical para reducir la altura */
+    background: var(--color-fondo-formulario);
+    border-radius: 8px;
+    box-shadow: var(--sombra-box);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; /* Menor espacio entre campos */
+    color: var(--color-texto);
+    text-align: left; /* Alineación a la izquierda */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 5px; /* Reducción del padding para menos altura */
+    margin-bottom: 5px; /* Menos margen entre campos */
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    background: var(--color-input-fondo);
+    color: var(--color-texto);
+}
+
+button#registro {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button#registro:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Ajustes responsivos para mejorar la visualización en dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 10px;
+        max-width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    }
+
+    h1 {
+        font-size: 24px; /* Ajuste del tamaño de fuente en dispositivos pequeños */
+    }
+}

@@ -120,7 +120,7 @@ input {
 
 .content button#registro {
     margin: 10px auto; 
-    width: 100%; 
+    width: 40%; 
     background-color: var(--color-primario); 
     color: var(--color-texto); 
     border: none;
@@ -130,3 +130,23 @@ input {
     transition: background-color 0.3s; 
 }
 
+#formMascota input[type='file'] {
+    color: #ffffff;
+    background-color: var(--color-primario); 
+    border-radius: 10px;
+}
+
+#formMascota input[type='file']::file-selector-button {
+    color: var(--color-primario); /* Blanco para el botón */
+    background-color: white; /* Fondo del botón para coincidir con otros botones del formulario */
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#formMascota input[type='file']::file-selector-button:hover {
+    background-color: #0a2942; 
+    color: white;
+}

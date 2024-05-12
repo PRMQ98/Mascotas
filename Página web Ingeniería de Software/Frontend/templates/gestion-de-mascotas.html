@@ -5,7 +5,7 @@ Registrar Mascota
 {% endblock %}
 
 {% block content %}
-<h1>Registrar Nueva Mascota</h1>
+<h1>REGISTRAR NUEVA MASCOTA</h1>
 <form id="formMascota" method="POST" enctype="multipart/form-data">
     <label for="tipo">Tipo:</label>
     <input type="text" id="tipo" name="tipo" required><br>
@@ -20,4 +20,5 @@ Registrar Mascota
     <button id="registro" type="submit">Registrar Mascota</button>
 </form>
 <script src="{{ url_for('static', filename='js/gestion-mascotas.js') }}"></script>
+<link rel="stylesheet" href="static/css/crear-mascota.css">
 {% endblock %}
