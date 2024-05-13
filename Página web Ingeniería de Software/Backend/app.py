@@ -1,3 +1,4 @@
+from functools import wraps
 from genericpath import isfile
 from ntpath import join
 from flask import Flask, request, jsonify, send_from_directory, url_for
@@ -9,6 +10,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 CORS(app, resources={r"/mascotasimages/*": {"origins": "*"}})
+
 
 menus_por_rol = {
     "MSALUD": ["Inicio", "Agregar Mascotas", "Gestión de Formularios"],
@@ -59,7 +61,7 @@ def guardar_imagen(imagen):
         raise ValueError('Tipo de archivo no permitido')
     imagen_path = os.path.join(app.config['UPLOAD_FOLDER'], imagen.filename)
     imagen.save(imagen_path)
-    return imagen.filename  # Devuelve solo el nombre del archivo
+    return imagen.filename 
 
 @app.route('/mascotasimages/<filename>')
 def uploaded_file(filename):
@@ -183,6 +185,8 @@ def descargar_pdf_mascota(mascota_id):
             return "Error al enviar el archivo", 500
     else:
         return "No se encontró la mascota o no se pudo generar el PDF", 404
+
+
 
 
 if __name__ == '__main__':
