@@ -150,10 +150,10 @@ WHERE UsuarioID IS NOT NULL;
 
 UPDATE DBAMASCOTAS.Mascotas
 SET Estado = 'No Disponible'
-WHERE Estado = 'Adoptado';
+WHERE Estado = 'Disponible';
 GO
 
-DELETE FROM DBAMASCOTAS.Mascotas WHERE MascotaID = '23';
+DELETE FROM DBAMASCOTAS.Usuarios WHERE RolID = '2';
 
 INSERT INTO DBAMASCOTAS.ImagenesFrontend (Nombre, FotografiaURL)
 VALUES 
@@ -177,7 +177,7 @@ VALUES ('Pablo', 'Morales', '2965298930313', '5ta avenida 3-13', '22445588', 'pa
 
 -- Insertar un usuario para el rol DSALUD
 INSERT INTO DBAMASCOTAS.Usuarios (Nombres, Apellidos, DPI, Direccion, NumeroTelefono, CorreoElectronico, RolID)
-VALUES ('Emmanuel', 'Ajsivinac', '2865298930313', '5ta avenida 3-13', '22445589', 'patito.yo95@gmail.com', (SELECT RolID FROM DBAMASCOTAS.Roles WHERE Nombre = 'DSALUD'));
+VALUES ('Brenda', 'Pérez', '2865298930313', 'El Hato Antigua Guatemala', '22445589', 'patito.yo95@gmail.com', (SELECT RolID FROM DBAMASCOTAS.Roles WHERE Nombre = 'DSALUD'));
 
 -- Insertar un usuario para el rol UFinal
 INSERT INTO DBAMASCOTAS.Usuarios (Nombres, Apellidos, DPI, Direccion, NumeroTelefono, CorreoElectronico, RolID)

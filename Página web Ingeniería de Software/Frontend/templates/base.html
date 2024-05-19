@@ -10,14 +10,13 @@
 </head>
 <body>
     <div class="sidebar" id="sidebarMenu">
-
-        <button id="logoutButton" >Cerrar Sesión</button>
+        <button id="logoutButton">Cerrar Sesión</button>
     </div>
     <div class="content" id="mainContent">
         {% block content %}
-
         {% endblock %}
     </div>
     <script src="{{ url_for('static', filename='js/inicio.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
 </body>
 </html>
