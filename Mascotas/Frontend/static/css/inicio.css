@@ -1,0 +1,132 @@
+.sidebar {
+    background-image: url('../images/fondo.jpg'); 
+    height: 92vh;
+    width: 250px;
+    position: fixed;
+    left: 7px;
+    top: 10px;
+    background-color: #27496d;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 20px;   
+    border-top-right-radius: 20px;  
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;  
+}
+
+.sidebar button.menuButton, .sidebar button#logoutButton {
+    padding: 10px 15px;
+    width: 90%;
+    background-color: #27496d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center; 
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar button.menuButton:hover, .sidebar button#logoutButton:hover {
+    background-color: #feffff;
+    color: black;
+}
+
+.sidebar button#logoutButton {
+    background-color: #7c0a06;
+    margin-top: auto;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    background-image: url('../images/fondo.jpg');
+    border-radius: 3%;
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+}
+
+.content form input, .content form button {
+    margin: 10px 0;
+    padding: 12px 20px;
+    width: calc(100% - 40px);
+    color: black;
+}
+
+#fotografia{
+    margin: 10px 0;
+    padding: 12px 20px;
+    width: calc(100% - 40px);
+    color: rgb(255, 255, 255);
+}
+
+.content form button {
+    background-color: #27496d;
+    color: white;
+    border-radius: 3%;
+}
+
+.content form button:hover {
+    background-color: #27496d;
+    color: white;
+}
+
+
+.login-container, .sidebar, .content {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
+button{ 
+    background-color: #27496d; 
+    transition: background-color 0.3s, transform 0.2s ease-in-out; 
+    position: relative; 
+    overflow: hidden; 
+    color: white;
+
+}
+
+button:hover { 
+    background-color: #0a2942; 
+    transform: scale(1.05); 
+}
+
+h1, label{
+    text-align: center;
+    color: white;
+}
+
+input{
+    text-align: left;
+    color: white;
+}
+
+
+.content button#registro {
+    margin: 10px auto; 
+    width: 100%; 
+    background-color: #27496d; 
+    color: white; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer; 
+    text-align: center; 
+    transition: background-color 0.3s; 
+}
