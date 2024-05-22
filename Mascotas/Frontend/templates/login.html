@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Log In</h1>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Correo Electrónico" required>
+        <input type="password" id="dpi" placeholder="DPI" required maxlength="13">
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    <button onclick="window.location.href='/crear_usuario'" class="create-user-btn">Crear Usuario</button>
+    <p id="loginMessage"></p>
+</div>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>
