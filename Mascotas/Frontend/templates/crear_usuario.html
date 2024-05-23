@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/crear_usuario.css') }}">
+</head>
+<body>
+<div class="formulario">
+    <h2>Crear Usuario</h2>
+    <form id="crearUsuarioForm">
+        <input type="text" id="nombres" placeholder="Nombres" required>
+        <input type="text" id="apellidos" placeholder="Apellidos" required>
+        <input type="text" id="dpi" placeholder="DPI" required maxlength="13"> 
+        <input type="text" id="direccion" placeholder="Dirección" required>
+        <input type="text" id="numeroTelefono" placeholder="Número de Teléfono" required>
+        <input type="email" id="correoElectronico" placeholder="Correo Electrónico" required>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <button onclick="window.location.href='/'" class="button">Ir a Log In</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/crear_usuario.js') }}"></script>
+</body>
+</html>
